@@ -1,11 +1,20 @@
-import java.util.Random;
-
 public class SkladSoucastek {
     private int hlava =0;
     private int telo=0;
     private int ruka=0;
     private int noha=0;
     private int panenka;
+    private int zabalenePanenky;
+
+    public int getZabalenePanenky() {
+        return zabalenePanenky;
+    }
+
+    public synchronized void ZabalPanenku() {
+        if (panenka>0) {
+            zabalenePanenky++;
+        }
+    }
 
     public void VytvorHlavu() {
         hlava++;
@@ -37,5 +46,21 @@ public class SkladSoucastek {
 
     public synchronized int getPanenka() {
         return panenka;
+    }
+
+    public int getHlava() {
+        return hlava;
+    }
+
+    public int getTelo() {
+        return telo;
+    }
+
+    public int getRuka() {
+        return ruka;
+    }
+
+    public int getNoha() {
+        return noha;
     }
 }

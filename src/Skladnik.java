@@ -9,7 +9,6 @@ public class Skladnik extends Delnik {
     Random rand = new Random();
     int rand_int1 = rand.nextInt(1000);
     int rand_int2 = rand.nextInt(100);
-    private final int Pocet_Plastu =10;
 
     @Override
     public void run() {
