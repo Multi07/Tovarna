@@ -20,8 +20,10 @@ public class DHlava extends Delnik {
 
     @Override
     public void run() {
-        while (super.getSkladSoucastek().getPanenka()<pocet_Panenek) {
-            if (super.getSkladSoucastek().getHlava()>50) {
+        while(super.getSklad().uberPlast(Pocet_Plastu)) {
+            while(getSklad().uberVlasy(Pocet_Vlasu)) {
+
+        if (super.getSkladSoucastek().getHlava()>50) {
                 try {
                     Thread.sleep(10000);
                 } catch (InterruptedException e) {
@@ -79,5 +81,6 @@ public class DHlava extends Delnik {
 
 
         }
+    }
     }
 }

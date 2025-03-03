@@ -16,16 +16,16 @@ public class SkladSoucastek {
         }
     }
 
-    public void VytvorHlavu() {
+    public synchronized void VytvorHlavu() {
         hlava++;
     }
-    public void VytvorTelo() {
+    public synchronized void VytvorTelo() {
         telo++;
     }
-    public void VytvorRuka() {
+    public synchronized void VytvorRuka() {
         ruka++;
     }
-    public void VytvorNoha() {
+    public synchronized void VytvorNoha() {
         noha++;
     }
     public synchronized boolean Vytvorpanenku() {
